@@ -15,7 +15,7 @@ from django.conf import settings
 #import requests
 BASE_DIR = settings.BASE_DIR
 STATIC=os.path.join(BASE_DIR, 'static')
-PICS = os.listdir(os.path.join(BASE_DIR, 'static\img'))
+PICS = os.listdir(os.path.join(BASE_DIR, 'static/img'))
 # Create your views here.
 
 print PICS
@@ -78,8 +78,8 @@ def temp(request):
 	plt.axis([1895,2016,-10,8])
 	plt.title('Plot of temprature of month %s from 1895-2015' %month[0])
 	#os.remove(os.getcwd() + '\Temprature.png')
-	plt.savefig(os.path.join(BASE_DIR, 'static\img\Temprature.png'),dpi=80)
-	plt.savefig(os.path.join(BASE_DIR, 'static\img\Temprature2.png'),dpi=80)
+	plt.savefig(os.path.join(BASE_DIR, 'static/img/Temprature.png'),dpi=80)
+	plt.savefig(os.path.join(BASE_DIR, 'static/img/Temprature2.png'),dpi=80)
 	fig.clf()
 	plt.close(fig)
 	#img=open(os.getcwd() + '\Temprature.png',"rb")
@@ -90,7 +90,7 @@ def temp(request):
     #img.close()
 	#image_bytes = requests.get(os.path.join(BASE_DIR, 'static\img\Temprature.png').content
 	#image_bytes.save(response,"PNG")#lambda x: x.startswith('Temprature')
-	f = open(os.path.join(BASE_DIR, 'static\img\Temprature.png'),"rb")
+	f = open(os.path.join(BASE_DIR, 'static/img/Temprature.png'),"rb")
 	img = f.read()
 	f.close()
 	cur.close()
