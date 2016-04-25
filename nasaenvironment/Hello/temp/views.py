@@ -6,7 +6,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
-#import pandas as pd
+import pandas as pd
 import MySQLdb as DB
 import sys
 import os
@@ -14,7 +14,8 @@ import json
 from django.conf import settings
 #import requests
 BASE_DIR = settings.BASE_DIR
-PICS = os.listdir(os.path.join(BASE_DIR, 'static/img'))
+STATIC=os.path.join(BASE_DIR, 'static')
+PICS = os.listdir(os.path.join(BASE_DIR, 'static\img'))
 # Create your views here.
 
 print PICS
@@ -22,6 +23,11 @@ print PICS
 def index(request):
 
     return render(request, 'index.html')
+	
+def img(request):
+	
+	img_path=os.path.join(STATIC, 'img/Temprature.png')
+	return render(request,'{% load staticfiles %}<img src=" {% static "img/Temprature.png" %}">')
 	
 def datavisualization(request):
 
@@ -72,7 +78,8 @@ def temp(request):
 	plt.axis([1895,2016,-10,8])
 	plt.title('Plot of temprature of month %s from 1895-2015' %month[0])
 	#os.remove(os.getcwd() + '\Temprature.png')
-	plt.savefig(os.path.join(BASE_DIR, 'static/img/Temprature.png'),dpi=80)
+	plt.savefig(os.path.join(BASE_DIR, 'static\img\Temprature.png'),dpi=80)
+	plt.savefig(os.path.join(BASE_DIR, 'static\img\Temprature2.png'),dpi=80)
 	fig.clf()
 	plt.close(fig)
 	#img=open(os.getcwd() + '\Temprature.png',"rb")
@@ -83,14 +90,14 @@ def temp(request):
     #img.close()
 	#image_bytes = requests.get(os.path.join(BASE_DIR, 'static\img\Temprature.png').content
 	#image_bytes.save(response,"PNG")#lambda x: x.startswith('Temprature')
-	f = open(os.path.join(BASE_DIR, 'static/img/Temprature.png'),"rb")
+	f = open(os.path.join(BASE_DIR, 'static\img\Temprature.png'),"rb")
 	img = f.read()
 	f.close()
 	cur.close()
 	cnx.close()	
-	return HttpResponse(month)
-	#return HttpResponse(
-        #json.dumps(img),
-        #content_type='image/png')
+	#return HttpResponse(month)
+	return HttpResponse(
+        json.dumps(month),
+        content_type='image/png')
 	#with open(os.path.join(BASE_DIR, 'static\img\Temprature.png'), "rb") as f:
 	    #return HttpResponse(f.read(), content_type="image/png")
