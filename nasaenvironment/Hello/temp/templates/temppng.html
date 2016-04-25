@@ -51,12 +51,12 @@
           </div>
         <nav class="templatemo-left-nav">          
           <ul>
-            <li><a href="index.html"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
-            <li><a href="data-visualization.html" class="active"><i class="fa fa-database fa-fw"></i>Data Visualization</a></li>
-            <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>Maps</a></li>
-            <li><a href="manage-users.html"><i class="fa fa-users fa-fw"></i>Manage Users</a></li>
-            <li><a href="preferences.html"><i class="fa fa-sliders fa-fw"></i>Preferences</a></li>
-            <li><a href="login.html"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
+            <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/data-visualization.html"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
+            <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/temppng.html" class="active"><i class="fa fa-database fa-fw"></i>Data Visualization</a></li>
+            <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/maps.html"><i class="fa fa-map-marker fa-fw"></i>Maps</a></li>
+            <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/manage-users.html"><i class="fa fa-users fa-fw"></i>Manage Users</a></li>
+            <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/preferences.html"><i class="fa fa-sliders fa-fw"></i>Preferences</a></li>
+            <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/login.html"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
           </ul>  
         </nav>
       </div>
@@ -66,8 +66,8 @@
           <div class="row">
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
-                <li><a href="index1.html" class="active">Back to Home Page</a></li>
-                <li><a href="index.html">Front Page</a></li>
+                <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000" class="active">Back to Home Page</a></li>
+                <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/data-visualization.html">Front Page</a></li>
                 <!--<li><a href="">Overview</a></li>
                 <li><a href="login.html">Sign in form</a></li>-->
               </ul>  
@@ -91,10 +91,29 @@
                           month: <input type="text" id="month" name="month" value="1"> 
                           <!--number: <input type="text" id="number" name="number" value="1"> <br>-->
                           
-                          <button type="button" id='sum'>Submite</button><p>result:<div class="col-6"><span id='result' style="width=300px; height=280px;">
+                          <button type="button" id='sum'>Submit</button><p>result:<div class="col-6"><span id='result' style="width=300px; height=280px;">
                           </span> </div></p>
 						  <br><br><br><br>
                         </form>
+
+                    </div>
+                                 
+                  </div>              
+                </div>     
+              </div>
+            </div>            
+
+            <div class="panel panel-default no-border">
+              <div class="panel-heading border-radius-50">
+                <h2></h2>
+              </div>
+              <div class="panel-body">
+                <div class="templatemo-flex-row flex-content-row margin-bottom-10">
+                  <div class="col-12">
+                    <div class="templatemo-chart">
+                      <p>Please enter the month(1-12) you want to check the temeprature</p>
+                        <iframe src="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/chart.html" width>
+                        </iframe>
 
                     </div>
                                  
