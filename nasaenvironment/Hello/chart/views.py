@@ -14,6 +14,9 @@ from bokeh.plotting import Figure
 
 STATISTICS = ['record_min_temp', 'actual_min_temp', 'average_min_temp', 'average_max_temp', 'actual_max_temp', 'record_max_temp']
 
+def city(request):
+
+    return render(request, 'city.html')
 
 def simple_chart(request):
     plot = figure()
