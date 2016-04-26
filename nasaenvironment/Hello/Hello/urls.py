@@ -28,7 +28,7 @@ urlpatterns = [
     url(r'^time/$',current_datetime),
     url(r'^time/plus/(\d{1,2})/$',hours_ahead),
     url(r'^temp/',temp_views.temp,name='temp'),
-    url(r'^energy/',energy,name='energy'),
+    url(r'^energy.html/',energy,name='energy'),
     #url(r'^Temprature.png/',temp_views.img,name='img'),
     url( r'^static/(?P<path>.*)$', 'django.views.static.serve',{ 'document_root':settings.STATIC_PATH }),
     url(r'^data-visualization.html/$',temp_views.datavisualization,name="data-visualization"),
