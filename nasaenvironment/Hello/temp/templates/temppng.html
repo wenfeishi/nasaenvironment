@@ -78,55 +78,22 @@
           <div class="templatemo-content-widget white-bg">
             <h2 class="margin-bottom-10">Data Visualization</h2>
             
-            <div class="panel panel-default no-border">
-              <div class="panel-heading border-radius-50">
-                <h2>Temeperature of Selected Month</h2>
-              </div>
-              <div class="panel-body">
+           
                 <!--<div class="templatemo-flex-row flex-content-row margin-bottom-10">
                   <div class="col-12">
                     <div class="templatemo-chart">-->
-                      <p>Please enter the month(1-12) you want to check the temeprature</p>
-                        <form action="/add/" method="get">
-                          month: <input type="text" id="month" name="month" value="1"> 
-                          <!--number: <input type="text" id="number" name="number" value="1"> <br>-->
-                          
-                         
-						  <br><br><br><br>
-                        </form>
-                        <p>{% load staticfiles %}<img class="one" alt="Show Result" id="slideShow" width="800px" height="500px"/></p>
-                        
-                        <script>
-              
-			                     $.ajaxSetup ({
-				// Disable caching of AJAX responses
-				                    cache: false
-				                    });
-				
-				                    var action =1;
-                				          $('img').on("click",viewSomething);
-				
-				                    function viewSomething(){
-				                      if (action == 1){
-					                         var month = $("#month").val();
-					                         $.get("{% url 'temp' %}", {'month':month});
-					                         $(this).attr('src', '{% static "img/Temprature.png/" %}');
-					                         action = 0;
-				                      } else {
-					                         $(this).attr('src','');
-					                         action =1;}
-				                    }
-				
-                
-                        
-			                   </script>
-                        
+              <div class="panel panel-default no-border">
+              	<div class="panel-heading border-radius-50">
+               		<h2>Temperature of the Month</h2>
+              	</div>
+                <div class="container-fluid">
 
-                    
+              			<iframe src="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/temp.html" height="1000px" width="1000px">
+              			</iframe>
                                  
                                 
                      
-              </div>
+              	</div>
             </div>            
 
             
