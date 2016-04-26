@@ -21,7 +21,7 @@
 
 				$('.selectpicker').on('change', function(){
 				var selected = $(this).find("option:selected").val();
-				chart_url = "http://localhost:8000/chart/"+"?city="+selected;
+				chart_url = "http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/"+"?city="+selected;
 				window.location.replace(chart_url);
 				
 				});
