@@ -80,7 +80,7 @@ def temp(request):
 	except:
 		print "Error: unable to fecth data"
 		
-	plot = Figure(x_range=[1895,2016], y_range=[-10,8],x_axis_type = "datetime", plot_width=1000, tools="", toolbar_location=None)
+	plot = Figure(x_range=[1895,2016], y_range=[-10,8], plot_width=1000, tools="", toolbar_location=None)
 	plot.title = "Plot of temprature of month %s from 1895-2015" % month[0]
 	colors = Blues4[0:3]
 	plot.border_fill_color = "whitesmoke"
