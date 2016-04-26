@@ -54,7 +54,7 @@
             <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/data-visualization.html"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
             <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/temppng.html" class="active"><i class="fa fa-database fa-fw"></i>Data Visualization</a></li>
             <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/maps.html"><i class="fa fa-map-marker fa-fw"></i>Maps</a></li>
-            <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/manage-users.html"><i class="fa fa-users fa-fw"></i>Manage Users</a></li>
+            <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/chart/?city=Boston"><i class="fa fa-users fa-fw"></i>City Temperature Function</a></li>
             <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/preferences.html"><i class="fa fa-sliders fa-fw"></i>Preferences</a></li>
             <li><a href="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/login.html"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
           </ul>  
@@ -98,28 +98,28 @@
                         
                         <script>
               
-			    $.ajaxSetup ({
+			                     $.ajaxSetup ({
 				// Disable caching of AJAX responses
-				cache: false
-				});
+				                    cache: false
+				                    });
 				
-				var action =1;
-                				$('img').on("click",viewSomething);
+				                    var action =1;
+                				          $('img').on("click",viewSomething);
 				
-				function viewSomething(){
-				  if (action == 1){
-					var month = $("#month").val();
-					$.get("{% url 'temp' %}", {'month':month});
-					$(this).attr('src', '{% static "img/Temprature.png/" %}');
-					action = 0;
-				  } else {
-					$(this).attr('src','');
-					action =1;}
-				}
+				                    function viewSomething(){
+				                      if (action == 1){
+					                         var month = $("#month").val();
+					                         $.get("{% url 'temp' %}", {'month':month});
+					                         $(this).attr('src', '{% static "img/Temprature.png/" %}');
+					                         action = 0;
+				                      } else {
+					                         $(this).attr('src','');
+					                         action =1;}
+				                    }
 				
                 
                         
-			</script>
+			                   </script>
                         
 
                     
@@ -129,24 +129,6 @@
               </div>
             </div>            
 
-            <div class="panel panel-default no-border">
-              <div class="panel-heading border-radius-50">
-                <h2></h2>
-              </div>
-              <div class="panel-body">
-                <div class="templatemo-flex-row flex-content-row margin-bottom-10">
-                  <div class="col-12">
-                    <div class="templatemo-chart">
-                      <p>Please enter the month(1-12) you want to check the temeprature</p>
-                        <iframe src="http://ec2-54-174-222-168.compute-1.amazonaws.com:8000/chart/?city=Boston" width= 600px height=1000>
-                        </iframe>
-
-                    
-                    </div>             
-                  </div>              
-                </div>  
-              </div>
-            </div>            
             
 
           <footer class="text-right">
