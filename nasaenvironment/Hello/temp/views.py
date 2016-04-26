@@ -27,6 +27,10 @@ def index(request):
 
     return render(request, 'index.html')
     
+def earthquake(request):
+
+    return render(request, 'earthquake.html')
+    
 def bird(request):
 
     return render(request, 'bird.html')
