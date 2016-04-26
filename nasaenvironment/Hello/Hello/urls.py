@@ -34,6 +34,7 @@ urlpatterns = [
     url(r'^data-visualization.html/$',temp_views.datavisualization,name="data-visualization"),
     url(r'^city.html/$',city,name="city"),
     url(r'^temppng.html/$',temp_views.temppng,name="temppng"),
+    url(r'^bird.html/$',temp_views.bird,name="bird"),
     url(r'^maps.html/$',temp_views.maps,name="maps"),
     url(r'^chart/$',chart, name="chart"),
     #url(r'^update_plot/$', update_plot, name="update_plot"),
