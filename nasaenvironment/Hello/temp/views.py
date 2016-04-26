@@ -18,7 +18,7 @@ from bokeh.plotting import Figure
 #import requests
 BASE_DIR = settings.BASE_DIR
 STATIC=os.path.join(BASE_DIR, 'static')
-PICS = os.listdir(os.path.join(BASE_DIR, 'static\img'))
+PICS = os.listdir(os.path.join(BASE_DIR, 'static/img'))
 # Create your views here.
 
 print PICS
