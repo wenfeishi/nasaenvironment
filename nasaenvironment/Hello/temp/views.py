@@ -23,6 +23,10 @@ print PICS
 def index(request):
 
     return render(request, 'index.html')
+
+def bird(request):
+
+    return render(request, 'bird.html')
 	
 def img(request):
 	
