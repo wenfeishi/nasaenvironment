@@ -17,6 +17,9 @@ STATISTICS = ['record_min_temp', 'actual_min_temp', 'average_min_temp', 'average
 def city(request):
 
     return render(request, 'city.html')
+    
+def energy(request):
+    return render(request,'energy.html')
 
 def simple_chart(request):
     plot = figure()
